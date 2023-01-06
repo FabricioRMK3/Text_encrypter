@@ -9,7 +9,7 @@ function crearRespuesta(textoResultado){
     parrafo.innerHTML = textoResultado;
     resultado.appendChild(parrafo);
     let botonCopiar = document.getElementById("btn-copy");
-    botonCopiar.className = "w-full mx-auto mt-3 bg-c-purple rounded-xl py-3 text-xl hover:bg-c-blue hover:text-white hover:text-2xl hover:duration-500"
+    botonCopiar.className = "w-full mx-auto mt-3 bg-c-purple rounded-xl py-3 text-xl hover:bg-c-blue hover:text-white hover:text-2xl duration-500 ease-in-out"
     botonCopiar.addEventListener("click", copiarTexto);
     resultado.appendChild(botonCopiar);
     
