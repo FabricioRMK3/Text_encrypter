@@ -70,9 +70,10 @@ function crearRespuesta(textoResultado){
   
     elemento.addEventListener("input", function() {
       console.log("Input event triggered");
-      this.value = this.value.toLowerCase().replace(/[^a-zA-ZÑñ\s?,.!\(\)\@\#\$\%\&]/g, "");
+      this.value = this.value.toLowerCase().normalize("NFD").replace(/[^a-zA-ZÑñ\s?,.!]/g, "");
     });
   });
+  
   
   // FUNCION PARA COPUAR EL TEXTO DESENCRIPTADO
   function copiarTexto() {
