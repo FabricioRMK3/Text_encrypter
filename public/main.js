@@ -5,7 +5,7 @@ function crearRespuesta(textoResultado){
     let resultado = document.getElementById("resultado");
     resultado.className = "";
     let parrafo  = document.getElementById("texto-salida");
-    parrafo.className = "outline-none resize-none w-full bg-transparent text-2xl h-auto lg:h-[500px] overflow-y-auto";
+    parrafo.className = "outline-none resize-none w-full bg-transparent text-white text-2xl h-auto lg:h-[500px] overflow-y-auto";
     parrafo.innerHTML = textoResultado;
     resultado.appendChild(parrafo);
     let botonCopiar = document.getElementById("btn-copy");
@@ -63,14 +63,16 @@ function crearRespuesta(textoResultado){
   }
   
   // CONVIERTE CUALQUIER TEXTO CON MAYUSCULAS O CON TILDES EN TEXTO PLANO
+  
   window.addEventListener("load", function() {
+    console.log("Page load event triggered");
     let elemento = document.getElementById("texto-entrada");
   
     elemento.addEventListener("input", function() {
-      this.value = this.value.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      console.log("Input event triggered");
+      this.value = this.value.toLowerCase().replace(/[^a-zA-ZÑñ\s?,.!\(\)\@\#\$\%\&]/g, "");
     });
   });
-  
   
   // FUNCION PARA COPUAR EL TEXTO DESENCRIPTADO
   function copiarTexto() {
@@ -87,7 +89,6 @@ function crearRespuesta(textoResultado){
 
   function clearTextarea() {
     document.querySelector('#texto-entrada').value = '';
-    document.querySelector('#texto-salida').value = '';
     
   }
   

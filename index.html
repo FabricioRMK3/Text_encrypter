@@ -43,7 +43,7 @@
         </div>
         <div class="lg:flex lg:flex-col-2 lg:gap-12 lg:min-h-[700px] mt-3">
             <div class=" bg-c-grey bg-gradient-to-tl from-indigo-500 shadow-2xl shadow-gray-700 rounded-3xl p-5 lg:w-full min-h-[350px] mb-6">
-                <textarea  class="outline-none resize-none p-2 w-full h-52 lg:h-[75%] text-white placeholder-white text-2xl font-medium bg-transparent" placeholder="Ingrese el texto aquí" id="texto-entrada"></textarea>
+                <textarea  class="outline-none resize-none p-2 w-full h-52 lg:h-[75%] text-white placeholder-white text-2xl font-medium bg-transparent caret-white cursor-default" placeholder="Ingrese el texto aquí" id="texto-entrada"></textarea>
                 <div class=" mt-8 lg:mt-3 p-3 h-48 lg:h-32  flex justify-around items-center flex-col lg:flex-row">
                     <button class="w-full mx-5 font-medium text-white bg-c-purple rounded-xl my-2 py-3 text-xl hover:text-2xl duration-500 ease-in-out" onclick="encriptar()">Encriptar</button>
                     <button class="w-full mx-5 font-medium text-white bg-c-purple rounded-xl my-2 py-3 text-xl hover:text-2xl duration-500 ease-in-out" onclick="desencriptar()">Desencriptar</button>
@@ -54,7 +54,7 @@
                 </div>
             </div>
             <div class="bg-c-grey shadow-2xl bg-gradient-to-tl from-indigo-500 shadow-gray-700 text-white rounded-3xl p-8 mb-6 lg:w-2/5" >
-                <div id="resultado" class="">
+                <div id="resultado" class=" text-white">
                     <textarea id="texto-salida" class="hidden lg:h-[500px]"></textarea>
                     <button class="hidden" id="btn-copy">Copiar</button>
                 </div>
