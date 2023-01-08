@@ -5,7 +5,7 @@ function crearRespuesta(textoResultado){
     let resultado = document.getElementById("resultado");
     resultado.className = "";
     let parrafo  = document.getElementById("texto-salida");
-    parrafo.className = "outline-none resize-none w-full bg-transparent text-white text-2xl h-auto lg:h-[500px] overflow-y-auto";
+    parrafo.className = "outline-none resize-none w-full bg-transparent text-white text-2xl !max-h-[450px] lg:min-h-[500px]";
     parrafo.innerHTML = textoResultado;
     resultado.appendChild(parrafo);
     let botonCopiar = document.getElementById("btn-copy");
